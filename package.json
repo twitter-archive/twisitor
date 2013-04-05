@@ -1,6 +1,6 @@
 {
   "name": "twisitor",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-crx": "0.2.0",
