@@ -1,0 +1,65 @@
+{
+    "name": {
+        "message": "Twisitor (by Twitter)"
+    },
+    "title": {
+        "message": "Twisitor Photobooth"
+    },
+    "description": {
+        "message": "Take pictures and tweet!"
+    },
+    "optionsTitle": {
+        "message": "Twisitor Options"
+    },
+    "optionsHeader": {
+        "message": "Twisitor Setup"
+    },
+    "prePopulatedTweetsHeader": {
+        "message": "Pre-populated Tweets"
+    },
+    "helpBlock": {
+        "message": "Use {handles} as the template for Twitter handles. Empty tweets will be ignored."
+    },
+    "addOneMore": {
+        "message": "Add one more"
+    },
+    "tweetLocation": {
+        "message": "Tweet Location"
+    },
+    "html5geolocation": {
+        "message": "Use HTML5 GeoLocation"
+    },
+    "shutterTimer": {
+        "message": "Shutter Timer"
+    },
+    "timer": {
+        "message": "Timer (in seconds)"
+    },
+    "oauthSettings": {
+        "message": "OAuth Settings"
+    },
+    "enterOAuthSettings": {
+        "message": "Enter your application OAuth settings"
+    },
+    "consumerKey": {
+        "message": "Consumer Key"
+    },
+    "consumerSecret": {
+        "message": "Consumer Secret"
+    },
+    "accessToken": {
+        "message": "Access Token"
+    },
+    "accessSecret": {
+        "message": "Access Secret"
+    },
+    "saveit": {
+        "message": "All set? Save it!"
+    },
+    "savebutton": {
+        "message": "Save"
+    },
+    "resetbutton": {
+        "message": "Reset"
+    }
+}

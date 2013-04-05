@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Twisitor</title>
+
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/oauthsimple.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/twitter.js"></script>
+    <script src="js/canvasimage.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="js/app.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+  </head>
+  <body>
+    <div id="container">
+      <img id="btnStart" src="img/takephoto.png" class="btn btn-primary" role="button"></a>
+    </div>
+
+<div id="dlgWizard" class="modal hide fade" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-header">
+    <button type="button" class="close">&times;</button>
+    <h3 id="dlgTitle"></h3>
+  </div>
+  <div class="modal-body">
+    <div id="scenePhotobooth">
+      <canvas id="monitor"></canvas>
+      <div id="flash"></div>
+      <div id="counter"></div>
+    </div>
+
+    <div id="sceneTwitterHandle">
+      <div id="handlesContainer">
+      </div>
+      <img class="thumbnail">
+    </div>
+
+    <div id="sceneStatusSelection">
+      <div id="statusesContainer" class="btn-group btn-group-vertical" data-toggle="buttons-radio">
+      </div>
+      <img class="thumbnail">
+    </div>
+
+    <div id="sceneTweetConfirm">
+      <h4 class="message"></h4>
+      <div id="tweet">
+        <div class="footer">
+          <img class="avatar" src="img/avatar.png">
+          <div class="text">
+            <p class="status"></p>
+            <p class="details"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button id="btnBack" type="button" class="btn btn-danger">Back</button>
+    <button id="btnNext" type="button" class="btn btn-primary">Next</button>
+    <button id="btnTimer" type="button" class="btn btn-info hide"></button>
+  </div>
+</div>
+
+</body>
+</html>

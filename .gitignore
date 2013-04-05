@@ -1,0 +1,11 @@
+*.pem
+*.crx
+*.swp
+*.swo
+*.swn
+.*.sw[a-z]
+*~
+.*~
+*#
+.*#
+node_modules

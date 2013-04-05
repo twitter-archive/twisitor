@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <title data-message="optionsTitle"></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+
+      <h1 data-message="optionsHeader"></h1>
+
+      <fieldset>
+        <div class="control-group">
+          <legend data-message="prePopulatedTweetsHeader"></legend>
+          <span data-message="helpBlock" class="help-block"></span>
+          <div id="statuses"></div>
+          <button data-message="addOneMore" class="btn" id="add-status"></button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend data-message="tweetLocation"></legend>
+        <form class="form-horizontal form-inline">
+          <div class="control-group">
+            <label class="control-label" for="placeid"><a href="https://dev.twitter.com/docs/finding-tweets-about-places">Place ID</a></label>
+            <div class="controls">
+              <input id="placeid" type="text" class="input-large" placeholder="Place ID"> 
+              <label class="checkbox">
+                <input type="checkbox" id="geolocation"> Use HTML5 Geolocation
+              </label>
+            </div>
+          </div>
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <legend data-message="shutterTimer"></legend>
+        <form class="form-horizontal">
+          <div class="control-group">
+            <label data-message="timer" class="control-label" for="countdown"></label>
+            <div class="controls">
+              <input id="countdown" type="text" class="input-large">
+            </div>
+          </div>
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <legend data-message="oauthSettings"></legend>
+        <span data-message="enterOAuthSettings" class="help-block"></span>
+        <form class="form-horizontal">
+          <div class="control-group">
+            <label data-message="consumerKey" class="control-label" for="consumer-key"></label>
+            <div class="controls">
+              <input type="password" id="consumer-key" placeholder="Consumer Key" class="input-block-level">
+            </div>
+          </div>
+          <div class="control-group">
+            <label data-message="consumerSecret" class="control-label" for="shared-secret"></label>
+            <div class="controls">
+              <input type="password" id="shared-secret" placeholder="Consumer Secret" class="input-block-level">
+            </div>
+          </div>
+          <div class="control-group">
+            <label data-message="accessToken" class="control-label" for="access-token"></label>
+            <div class="controls">
+              <input type="password" id="access-token" placeholder="Access Token" class="input-block-level">
+            </div>
+          </div>
+          <div class="control-group">
+            <label data-message="accessSecret" class="control-label" for="access-secret"></label>
+            <div class="controls">
+              <input type="password" id="access-secret" placeholder="Access Secret" class="input-block-level">
+            </div>
+          </div>
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <div class="control-group">
+          <legend data-message="saveit"></legend>
+          <button data-message="savebutton" class="btn btn-primary" id="save"></button>
+          <button data-message="resetbutton" class="btn" id="reset"></button>
+        </div>
+      </fieldset>
+    </div>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/options.js"></script>
+  </body>
+</html>

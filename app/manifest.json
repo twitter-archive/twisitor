@@ -1,0 +1,31 @@
+{
+  "name": "Twisitor",
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "description": "Your own Twitter Photobooth",
+  "default_locale": "en",
+
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+
+  "permissions": [
+    "http://twitter.com/*",
+    "https://twitter.com/*",
+    "http://*.twitter.com/*",
+    "https://*.twitter.com/*",
+    "unlimitedStorage"
+  ],
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'; connect-src https://api.twitter.com http://api.twitter.com",
+
+  "options_page": "options.html"
+}
