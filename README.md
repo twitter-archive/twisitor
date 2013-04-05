@@ -10,10 +10,10 @@ It's developed as a Chrome application (extension).
 
 To get started, simply install Twisitor locally:
 
-* Visit chrome:extensions in Google Chrome
+* Visit `chrome:extensions` in Google Chrome
 * Check the "Developer mode" checkbox
 * Click the "Load unpacked extension..." button
-* Select the app directory, at <PROJECT_ROOT>
+* Select the *app* directory, at `<PROJECT_ROOT>`
 
 Setup the options as described below and then launch the application to begin!
 
