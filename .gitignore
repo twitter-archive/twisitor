@@ -1,0 +1,8 @@
+build
+package
+resources
+*.pem
+*.crx
+.DS_Store
+commit.msg
+node_modules
