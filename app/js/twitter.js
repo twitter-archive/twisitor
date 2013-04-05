@@ -1,6 +1,6 @@
 'use strict';
 
-var Twitter = {
+Twitter = {
   tweet: function(status, media_data, callback) {
     var data,
         api_url = 'https://api.twitter.com/1.1/statuses/update_with_media.json';
