@@ -1,4 +1,4 @@
-# Twisitor [![Build Status](https://secure.travis-ci.org/twitter/twisitor.png)](http://travis-ci.org/twitter/twisitor)
+# Twisitor [![Build Status](https://travis-ci.org/twitter/twisitor.png?branch=master)](https://travis-ci.org/twitter/twisitor)
 
 Twisitor is a simple and spectacular photo-tweeting birdhouse.
 
