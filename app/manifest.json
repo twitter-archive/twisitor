@@ -1,7 +1,7 @@
 {
   "name": "Twisitor",
   "manifest_version": 2,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Your own Twitter Photobooth",
   "default_locale": "en",
 
