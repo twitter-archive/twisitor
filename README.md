@@ -55,6 +55,16 @@ If you haven't done this before, create a new twitter application here: https://
 
 ###
 
+## Lego Birdhouse
+
+We have open sourced the design of our traveling Lego birdhouse:
+
+![Twisitor Lego Birdhouse](https://github.com/twitter/twisitor/raw/master/images/legobirdhouse.jpg) 
+
+See the [LEGO Birdhouse README](README-BIRDHOUSE.md) for more information.
+
+You can also open the [LXF](birdhouse.lxf) file in [Lego Digital Designer](http://ldd.lego.com/).
+
 ## Kiosk Mode
 
 Are you running in Kiosk Mode?
@@ -81,6 +91,7 @@ A special thanks to:
 * Adelin Cai
 * Henna Kermani
 * Bryan Innes
+* Doug Grismore (for the lego birdhouse)
 
 ## License
 Copyright 2013 Twitter, Inc and other contributors.
