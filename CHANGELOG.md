@@ -1,3 +1,7 @@
+## v1.1.0 (07/12/2013)
+
+* Added Lego Birdhouse design by @dgr
+
 ## v1.0.1 (04/08/2013)
 
 ###bug fixes and tweaks
