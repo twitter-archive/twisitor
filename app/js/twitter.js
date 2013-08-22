@@ -7,7 +7,7 @@ window.Twitter = {
 
     data = {
       'status': status,
-      'media_data[]': media_data || '',
+      'media[]': media_data || '',
       'place_id': localStorage.getItem('placeid'),
       'display_coordinates': true
     };
