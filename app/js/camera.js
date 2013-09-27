@@ -8,11 +8,7 @@ function Camera() {
 
 $.extend(Camera.prototype, {
   getCamera: function (onSuccess, onError) {
-    if (navigator.getUserMedia) {
-      navigator.getUserMedia('video', onSuccess, onError);
-    } else if (navigator.webkitGetUserMedia) {
-      navigator.webkitGetUserMedia({video: true}, onSuccess, onError);
-    }
+    navigator.webkitGetUserMedia({audio: true, video: true}, onSuccess, onError); 
   },
 
   startCapture: function(onSuccess, onError) {

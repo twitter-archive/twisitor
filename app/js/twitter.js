@@ -8,7 +8,7 @@ window.Twitter = {
     data = {
       'status': status,
       'media[]': media_data || '',
-      'place_id': localStorage.getItem('placeid'),
+      'place_id': chrome.storage.local.get('placeid'),
       'display_coordinates': true
     };
 
@@ -29,12 +29,12 @@ window.Twitter = {
         data: data,
         complete: callback,
         headers: {
-          'Authorization': this._sign('POST', api_url)
+          'Authorization': this._sign('POST', api_url),
         }
       });
     }
 
-    if (localStorage.getItem('geolocation') === 'true') {
+    if (chrome.storage.local.get('geolocation') === 'true') {
       navigator.geolocation.getCurrentPosition(tweet.bind(this),
         tweet.bind(this));
     } else {
@@ -49,6 +49,19 @@ window.Twitter = {
     } else {
       parameters = 'oauth_signature_method="HMAC-SHA1"';
     }
+
+	chrome.storage.local.get('consumer_key', function (result) {
+		consumer_key = result.consumer_key;
+	});
+	chrome.storage.local.get('shared_secret', function (result) {
+		shared_secret = result.shared_secret;
+	});
+	chrome.storage.local.get('access_token', function (result) {
+		access_token = result.access_token;
+	});
+	chrome.storage.local.get('access_secret', function (result) {
+		access_secret = result.access_secret;
+	});
 
     var param = {
       action: method,
@@ -71,9 +84,10 @@ window.Twitter = {
   },
 
   _oauth_signatures: {
-    consumer_key: localStorage.getItem('consumer-key'),
-    shared_secret: localStorage.getItem('shared-secret'),
-    access_token: localStorage.getItem('access-token'),
-    access_secret: localStorage.getItem('access-secret')
+	consumer_key: '',
+	shared_secret: '',
+	access_token: '',
+	access_secret: ''
   }
+
 };

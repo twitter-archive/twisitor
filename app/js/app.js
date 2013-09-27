@@ -1,19 +1,15 @@
 'use strict';
 
 // initialize options
-if (!localStorage.getItem('statuses')) {
-  localStorage.setItem('statuses',
-    [
+var statuses = [
       'Hey&#44; it\'s {handles} at the @Twoffice!',
       'Thanks @Twoffice for having {handles} here!',
       'Twish you were here! Love&#44; {handles}'
-    ].join(',')
-  );
-}
+].join(',');
 
-// fullscreen
-chrome.windows.getCurrent(null, function(win) {
-  chrome.windows.update(win.id, {state: 'fullscreen'});
+chrome.storage.local.get('statuses', function (result) {
+	console.log(result.statuses);
+    chrome.storage.local.set({'statuses': statuses});
 });
 
 var camera = null;
@@ -26,6 +22,7 @@ var App = {
 
   start: function() {
     this.$btnStart = $('#btnStart');
+    this.$btnOptions = $('#btnOptions');
     this.$wizard = $('#dlgWizard');
     this.$btnClose = $('.close');
     this.$dlgTitle = $('#dlgTitle');
@@ -48,6 +45,13 @@ var App = {
       App.currentScene = App.scenePhotobooth;
       App.currentScene.show();
       App.$wizard.modal('show');
+    });
+
+    this.$btnOptions.on('click', function() {
+	chrome.app.window.create('options.html', {
+    	  'width': 1024,
+    	  'height': 768
+        });
     });
 
     this.$btnNext.on('click', function() {
@@ -123,7 +127,10 @@ var App = {
     timer: function() {
       App.$btnClose.hide();
       this.$btnTimer.hide();
-      this.countdown = parseInt(localStorage.getItem('countdown'), 10) || 5;
+      chrome.storage.local.get('countdown', function (result) {
+        this.countdown = parseInt(result.countdown, 10) || 5;
+        alert(this.countdown);
+      });
       this.countdownShutter();
     },
 
@@ -289,9 +296,14 @@ var App = {
       App.currentScene.show();
     },
 
-    statuses: localStorage.getItem('statuses').split(',').map(function(s) {
-                return s.replace(/&#44;/g, ',');
-              })
+    statuses: function() {
+	  chrome.storage.local.get('statuses', function (result) {
+		console.log(result.statuses);
+		return result.statuses.split(',').map(function(s) {
+	      return s.replace(/&#44;/g, ',');
+	    })
+	  });
+	}
   },
 
   sceneTweetConfirm: {
