@@ -77,6 +77,10 @@
   top: 13px;
 }
 
+#sceneStatusSelection {
+  min-height: 120px;
+}
+
 #sceneStatusSelection .thumbnail {
   right: 20px;
 }
