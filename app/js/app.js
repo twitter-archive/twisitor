@@ -338,9 +338,16 @@ var App = {
       });
       this.$details.text(mask);
 
+      var binary = atob(App.snapshot.canvas.toDataURL('image/jpeg').split(',')[1]);
+      var array = [];
+      for(var i = 0; i < binary.length; i++) {
+        array.push(binary.charCodeAt(i));
+      }
+      var blobImage = new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
+
       Twitter.tweet(
         status,
-        App.snapshot.canvas.toDataURL('image/jpeg').slice(23),
+        blobImage,
         function() {
           that.$message.text('Thank you!');
           setTimeout(function() {
