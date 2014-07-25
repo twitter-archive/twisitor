@@ -61,5 +61,44 @@
     },
     "resetbutton": {
         "message": "Reset"
+    },
+    "getreadyText": {
+        "message": "Get ready!"
+    },
+    "twisitorTitle": {
+        "message": "Twisitor"
+    },
+    "twitterHandlePlaceholderText": {
+        "message": "Twitter handle"
+    },
+    "twitterHandleTitle": {
+        "message": "Enter your Twitter Handle"
+    },
+    "andText": {
+        "message": "and"
+    },
+    "meText": {
+        "message": "me"
+    },
+    "selectTweetTitle": {
+        "message": "Select your Tweet"
+    },
+    "tweetbutton": {
+        "message": "Tweet!"
+    },
+    "backbutton": {
+        "message": "Back"
+    },
+    "nextbutton": {
+        "message": "Next"
+    },
+    "postingTitle": {
+        "message": "Posting your Tweet"
+    },
+    "waitText": {
+      "message": "Please wait..."
+    },
+    "thankyouText": {
+      "message": "Thank you!"
     }
 }
