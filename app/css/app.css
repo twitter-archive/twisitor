@@ -11,6 +11,7 @@
 #scenePhotobooth {
   position: relative;
   height: 480px;
+  overflow: hidden;
 }
 
 #monitor ,
@@ -33,7 +34,7 @@
   color: white;
   text-align: center;
   font: bold 100px sans-serif;
-  margin-top: 175px;
+  padding-top: 175px;
   opacity: 0.7;
 }
 
@@ -74,6 +75,10 @@
   height: 120px;
   position: absolute;
   top: 13px;
+}
+
+#sceneStatusSelection {
+  min-height: 120px;
 }
 
 #sceneStatusSelection .thumbnail {
